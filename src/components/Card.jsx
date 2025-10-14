@@ -2,9 +2,14 @@ import React from 'react';
 import styles from './Card.module.css';
 
 const Card = ({ item, type }) => {
-  const handleDisplay = (e) => {
+  const handleDisplay = (e, href) => {
     e.preventDefault();
-    window.open(e.currentTarget.href, '_blank');
+    window.open(href, '_blank');
+  };
+
+  // Function to get the filename from path
+  const getFileName = (path) => {
+    return path.split('/').pop().replace(/\.pdf$/i, '').replace(/[-_]/g, ' ');
   };
 
   return (
@@ -13,13 +18,30 @@ const Card = ({ item, type }) => {
         <span className={styles.cardNumber}>{item.id}</span>
         <h3 className={styles.cardTitle}>{item.title}</h3>
       </div>
-      <a 
-        href={item.href} 
-        className={styles.displayButton}
-        onClick={handleDisplay}
-      >
-        Display
-      </a>
+      <div className={styles.buttonContainer}>
+        <a 
+          href={item.href} 
+          className={styles.displayButton}
+          onClick={(e) => handleDisplay(e, item.href)}
+        >
+          Display
+        </a>
+        {item.additionalFiles && item.additionalFiles.length > 0 && (
+          <div className={styles.additionalFiles}>
+            {item.additionalFiles.map((file, index) => (
+              <a
+                key={index}
+                href={file}
+                className={styles.additionalFileButton}
+                onClick={(e) => handleDisplay(e, file)}
+                title={getFileName(file)}
+              >
+                File {index + 1}
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

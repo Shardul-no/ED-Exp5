@@ -1,17 +1,37 @@
 [
   {
     "id": 1,
-    "title": "Assignment 1: Introduction to React",
-    "href": "/pdfs/assignment1.pdf"
+    "title": "Assignment 1A: Report on Successful Entrepreneur",
+    "href": "/assignment/ass 1A.pdf"
   },
   {
     "id": 2,
-    "title": "Assignment 2: State Management",
-    "href": "/pdfs/assignment2.pdf"
+    "title": "Assignment 1B: SWOT Analysis",
+    "href": "/assignment/ass 1B.pdf"
   },
   {
     "id": 3,
-    "title": "Assignment 3: Hooks and Effects",
-    "href": "/pdfs/assignment3.pdf"
+    "title": "Assignment 2: Business Idea",
+    "href": "/assignment/ass 2.pdf"
+  },
+  {
+    "id": 4,
+    "title": "Assignment 3: Market Research Survey & Findings",
+    "href": "/assignment/ass 3.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Assignment 4: Logo Design & Branding Strategy",
+    "href": "/assignment/ass 4.pdf"
+  },
+  {
+    "id": 6,
+    "title": "Assignment 5: Break-even Analysis",
+    "href": "/assignment/ass 5.pdf"
+  },
+  {
+    "id": 7,
+    "title": "Assignment 6: Case Study on Startup Failure",
+    "href": "/assignment/ass 6.pdf"
   }
 ]

@@ -1,17 +1,63 @@
 [
   {
     "id": 1,
-    "title": "Experiment 1: Component Composition",
-    "href": "/pdfs/experiment1.pdf"
+    "title": "Experiment 1: Business Idea Generation using Mindmapping & Brainstorming",
+    "href": "/experiment/exp 1 brainstorm.pdf",
+    "additionalFiles": [
+      "/experiment/exp 1 mindmap parameter.pdf",
+      "/experiment/exp 1 mindmap.pdf"
+    ]
   },
   {
     "id": 2,
-    "title": "Experiment 2: Custom Hooks",
-    "href": "/pdfs/experiment2.pdf"
+    "title": "Experiment 2: Business Model Canvas",
+    "href": "/experiment/exp 2 buisness model canvas.pdf",
+    "additionalFiles": [
+      "/experiment/exp 2 witeup.pdf"
+    ]
   },
   {
     "id": 3,
-    "title": "Experiment 3: Context API",
-    "href": "/pdfs/experiment3.pdf"
+    "title": "Experiment 3: Market Research and Customer Validation",
+    "href": "/experiment/exp 3 mvp.pdf",
+    "additionalFiles": [
+      "/experiment/exp 3 mvp description.pdf",
+      "/experiment/exp 3 survey.pdf"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Experiment 4: Financial Plan and Break Even Analysis",
+    "href": "/experiment/exp 4.pdf"
+  },
+  {
+    "id": 5,
+    "title": "Experiment 5: Website Creation",
+    "href": "/experiment/exp 6.pdf"
+  },
+  {
+    "id": 6,
+    "title": "Experiment 6: Social Media Marketing",
+    "href": "/experiment/exp 7.pdf"
+  },
+  {
+    "id": 7,
+    "title": "Experiment 7: Prototype using Figma",
+    "href": "/experiment/exp 8.pdf"
+  },
+  {
+    "id": 8,
+    "title": "Experiment 8: Investor Pitch Deck",
+    "href": "/experiment/exp 9.pdf"
+  },
+  {
+    "id": 9,
+    "title": "Experiment 9: Startup India Scheme",
+    "href": "/experiment/exp 10.pdf"
+  },
+  {
+    "id": 10,
+    "title": "Experiment 10: Government Regulations",
+    "href": "/experiment/exp 5.pdf"
   }
 ]

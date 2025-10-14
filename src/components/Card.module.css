@@ -60,3 +60,75 @@
 .displayButton:hover {
   background-color: #3a5bd9;
 }
+
+.figmaButton {
+  display: inline-block;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.figmaButton:hover {
+  background-color: #333;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.additionalFiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.additionalFileButton {
+  display: inline-block;
+  background-color: #f0f2f5;
+  color: #4a6cf7;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #e1e4e8;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.additionalFileButton:hover {
+  background-color: #e6e9f0;
+  border-color: #d0d7de;
+  color: #3a5bd9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .additionalFiles {
+    flex-direction: column;
+  }
+  
+  .additionalFileButton {
+    width: 100%;
+  }
+}

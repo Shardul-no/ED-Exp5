@@ -7,6 +7,10 @@ function App() {
   const [experiments, setExperiments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [studentViews, setStudentViews] = useState({
+    shardul: 'assignments',
+    rushikesh: 'assignments'
+  });
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,8 +39,47 @@ function App() {
     fetchData();
   }, []);
 
+  const handleViewChange = (student, view) => {
+    setStudentViews(prev => ({
+      ...prev,
+      [student]: view
+    }));
+  };
+
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">Error: {error}</div>;
+
+  const renderContent = (student) => {
+    const items = studentViews[student] === 'assignments' ? assignments : experiments;
+    return (
+      <div className="cards-container">
+        {items.map(item => (
+          <Card 
+            key={`${student}-${studentViews[student]}-${item.id}`} 
+            item={item} 
+            type={studentViews[student]} 
+          />
+        ))}
+      </div>
+    );
+  };
+
+  const renderStudentSection = (student, name) => (
+    <div className="student-section">
+      <h2>{name}</h2>
+      <div className="dropdown-container">
+        <select 
+          value={studentViews[student]}
+          onChange={(e) => handleViewChange(student, e.target.value)}
+          className="view-selector"
+        >
+          <option value="assignments">Assignments</option>
+          <option value="experiments">Experiments</option>
+        </select>
+      </div>
+      {renderContent(student)}
+    </div>
+  );
 
   return (
     <div className="app">
@@ -45,26 +88,29 @@ function App() {
       </header>
       
       <main className="content">
-        <section className="section">
-          <h2>Assignments</h2>
-          <div className="cards-container">
-            {assignments.map(item => (
-              <Card key={`assignment-${item.id}`} item={item} type="assignment" />
-            ))}
-          </div>
-        </section>
-        
-        <section className="section">
-          <h2>Experiments</h2>
-          <div className="cards-container">
-            {experiments.map(item => (
-              <Card key={`experiment-${item.id}`} item={item} type="experiment" />
-            ))}
-          </div>
-        </section>
+        <div className="student-columns">
+          <section className="section">
+            {renderStudentSection('shardul', 'Shardul')}
+          </section>
+          
+          <section className="section">
+            {renderStudentSection('rushikesh', 'Rushikesh')}
+          </section>
+        </div>
       </main>
+      
+      <div className="figma-button-container">
+        <a 
+          href="https://www.figma.com/make/BMZwB7vmhlWvjAlmZEtG0z/Capmateria-B2B-Financing-Platform?node-id=0-1&t=GEeLa3r2PkynaAGX-1" 
+          className="figma-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Figma Design
+        </a>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
