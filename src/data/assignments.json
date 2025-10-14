@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Assignment 1: Introduction to React",
+    "href": "/pdfs/assignment1.pdf"
+  },
+  {
+    "id": 2,
+    "title": "Assignment 2: State Management",
+    "href": "/pdfs/assignment2.pdf"
+  },
+  {
+    "id": 3,
+    "title": "Assignment 3: Hooks and Effects",
+    "href": "/pdfs/assignment3.pdf"
+  }
+]
